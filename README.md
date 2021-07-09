@@ -8,7 +8,7 @@ git clone git@github.com:PetengDedet/openmusicapp_consumer.git
 
 - Set ENV vars
 ```shell
-cp .env.example .enc
+cp .env.example .env
 ```
 
 - Install Dependencies
