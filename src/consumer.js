@@ -13,13 +13,15 @@ const init = async () => {
   const connection = await amqp.connect(process.env.RABBITMQ_SERVER);
   const channel = await connection.createChannel();
 
-  await channel.assertQueue('export:playlists', {
+  await channel.assertQueue(process.env.PLAYLIST_CHANNEL, {
     durable: true,
   });
 
-  channel.consume('export:playlists', listener.listen, {
+  channel.consume(process.env.PLAYLIST_CHANNEL, listener.listen, {
     noAck: true,
   });
+
+  console.log(`Listening RabbitMQ on ${process.env.RABBITMQ_SERVER} for channel: "${process.env.PLAYLIST_CHANNEL}"`);
 };
 
 init();
