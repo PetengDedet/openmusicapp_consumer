@@ -1,0 +1,30 @@
+{
+  "name": "openmusicapp_consumer",
+  "version": "1.0.0",
+  "description": "RabbitMQ consumer to listen on playlist export and send to intended mail address",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PetengDedet/openmusicapp_consumer.git"
+  },
+  "author": "Ikhwan Maftuh <ikhwan.post@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PetengDedet/openmusicapp_consumer/issues"
+  },
+  "homepage": "https://github.com/PetengDedet/openmusicapp_consumer#readme",
+  "dependencies": {
+    "amqplib": "^0.8.0",
+    "dotenv": "^10.0.0",
+    "nodemailer": "^6.6.2",
+    "pg": "^8.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.30.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4"
+  }
+}
